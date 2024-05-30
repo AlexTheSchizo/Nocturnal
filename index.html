@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Nocturnal</title>
+</head>
+
+<body>
+    <div class="menu_bar">
+
+        <button class="menu_choice menu_element" onclick="changePage(0)" id="main_page_button">
+            <p class="English def_hide">Main page</p>
+            <p class="Hungarian">Kezdőlap</p>
+        </button>
+        <button class="menu_choice menu_element" onclick="changePage(1)" id="character_page_button">
+            <p class="English def_hide">Characters</p>
+            <p class="Hungarian">Karakterek</p>
+        </button>
+        <img src="media/gblogo2.png" id="logo" class="menu_element" alt="Logo">
+        <button class="menu_choice menu_element" onclick="changePage(2)" id="staff_page_button">
+            <p class="English def_hide">Moon Staff</p>
+            <p class="Hungarian">Holdpálca</p>
+        </button>
+        <button class="menu_choice menu_element" onclick="changePage(3)" id="gallery_page_button">
+            <p class="English def_hide">Gallery</p>
+            <p class="Hungarian">Galéria</p>
+        </button>
+        <button class="menu_choice lang_change" onclick="changeLang()" id="gallery_page_button">
+            <p class="English def_hide">EN</p>
+            <p class="Hungarian">HU</p>
+        </button>
+    </div>
+
+
+    <div class="background">
+        <div class="frame def_set-0 layout_margin">
+            <button class="func_button page_button prev to_left_side" onclick="changePage('prev')"></button>
+            <button class="func_button page_button next to_right_side" onclick="changePage('next')"></button>
+        </div>
+
+
+
+        <div class="page def_hide layout_margin" id="main_page">
+            <nav class="char_menu_bar">
+                <div class="title" id="main_title">
+                    <h1 class="English def_hide">Game plan</h1>
+                    <h1 class="Hungarian">Játékterv</h1>
+                </div>
+            </nav>
+            <div class="text_background">
+                <div class="textbox Hungarian">
+                    <p>
+                        Mentsd meg az Utolsó Fényerdőt! Eltűnt a Hold, ne hagyd, hogy a sötétség győzzön. A barátaid nem
+                        azok, mint akinek hitted őket, többé semmi sem lesz ugyanolyan. Bármi áron képes vagy harcolni?
+                    </p>
+                </div>
+                <div class="textbox English def_hide">
+                    <p>
+                        Save the Last LightForest! The moon disappeared, don't let the shadow win. Your friends are not
+                        what
+                        you thought,
+                        nothing will ever be the same. Are you ready to sacrifice everything?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="page def_hide layout_margin" id="character_page">
+            <div class="character_background">
+                <div class="char_content def_hide" id="Syzygy">
+                    <nav class="char_menu_bar">
+                        <button class="func_button char_button prev" onclick="openChar(event,'Luna_moth')"></button>
+                        <div class="title" id="main_title">
+                            <h1>Syzygy</h1>
+                        </div>
+                        <button class="func_button char_button next" onclick="openChar(event,'Luna_moth')"></button>
+                    </nav>
+                    <img class="char_img" src="media/Syzygy.png" alt="Kép syzygyről">
+                    <div class="textbox Hungarian">
+                        <p>
+                            Ő a főkarakter Syzygy (magyarul együtt állas, csillagászatban), mágikus erővel rendelkezik,
+                            magabiztos és érzelmileg erős. Meg kell mentenie az Utolsó Fényerdőt, viszont nagy áldozatot
+                            kell hoznia a győzelemért.
+                        </p>
+                    </div>
+                    <div class="textbox English def_hide">
+                        <p>
+                            She is Syzygy (in astronomy, an alignment of three celestial objects), the main character,
+                            she has magical powers,
+                            confident and strong. She has to save the Last LightForest, and to make a great sacrifice
+                            for victory.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="char_content def_hide" id="Luna_moth">
+                    <nav class="char_menu_bar">
+                        <button class="func_button char_button prev" onclick="openChar(event,'Syzygy')"></button>
+                        <div class="title" id="main_title">
+                            <h1>Luna</h1>
+                        </div>
+                        <button class="func_button char_button next" onclick="openChar(event,'Syzygy')"></button>
+                    </nav>
+                    <img class="char_img" id="Luna_img" src="media/Luna.png" alt="Kép Lunaról">
+                    <div class="textbox Hungarian">
+                        <p>
+                            Luna egy Holdasszövő éjjeli lepke és világít. Syzygy társa és az egyetlen ilyen lény a
+                            világon. Segít a történet során barátjának, viszont a végén feláldozza magát az erdő
+                            megmentéséért. A harc végén a holdból rengeteg kis Holdasszövő lepke száll le az erdőbe,
+                            így az Utolsó Fényerdő többé nem az utolsó.
+                            <p class="easter_egg">Moth party</p>
+                            <p class="easter_egg">Gimmi lömp</p>
+                        </p>
+                    </div>
+                    <div class="textbox English def_hide">
+                        <p>
+                            Luna is a Moon moth and she glows in the dark. She is Syzygy's companion and the last of
+                            its kind,who helps his friend
+                            throughout the journey. In order to save the forest she's got to sacrifice her life.
+                            At the end of the fight hundreds of moon moths descend from the moon, hence the Last
+                            LightForest is not the last one anymore.
+                            <p class="easter_egg">Moth party</p>
+                            <p class="easter_egg">Gimmi lömp</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="page def_hide layout_margin" id="staff_page">
+            <div class="staff_content">
+                <img class="staff_img" id="full_staff" src="media/full_staff.png" alt="Kép syzygyről">
+                <img class="staff_img" id="moon" src="media/moon.png" alt="Kép syzygyről">
+                <img class="staff_img" id="crystal" src="media/crystal.png" alt="Kép syzygyről">
+                <div class="textbox Hungarian">
+                    <p>
+                        Csak a Holdpálca segítségével lehet életre kelteni a Holdat, hogy mágikus fényével
+                        megtisztítsa
+                        a
+                        világot. Viszont fel kell tölteni Holdporral, az pedig csak Luna szárnyain maradt. Fel kell
+                        áldoznia magát?
+                    </p>
+                </div>
+                <div class="textbox English def_hide">
+                    <p>
+                        Only with the help of the Moon Staff can the Moon be revived, as it's magical light cleanses
+                        the world from the shadows.But it needs to be charged with Moondust, and that only remained
+                        on
+                        Luna's wings.
+                        Does she has to sacrifce her own life?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="page def_hide layout_margin" id="gallery_page">
+
+            <div class="gallery_grid">
+
+                <figure class="gallery_item gallery_item-2">
+                    <a target="_blank" href="media/crystal.png">
+                        <img src="media/crystal.png" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-3">
+                    <a target="_blank" href="media/background_main.jpg">
+                        <img src="media/background_main.jpg" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-4">
+                    <a target="_blank" href="media/gblogo2.png">
+                        <img src="media/gblogo2.png" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-5">
+                    <a target="_blank" href="media/full_staff.png">
+                        <img src="media/full_staff.png" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-6">
+                    <a target="_blank" href="media/moon.png">
+                        <img src="media/moon.png" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-7">
+                    <a target="_blank" href="media/Luna.png">
+                        <img src="media/Luna.png" class="gallery_img">
+                    </a>
+                </figure>
+                <figure class="gallery_item gallery_item-1">
+                    <a target="_blank" href="media/Syzygy.png">
+                        <img src="media/Syzygy.png" class="gallery_img">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
